@@ -14,7 +14,9 @@ class TaskController{
         require_once __DIR__ .'/../presentation/layout.php';
     }
 
-    public function create(){}
+    public function create(){
+        require_once __DIR__.'/../presentation/layout.php';
+    }
 
     public function store(){}
 
