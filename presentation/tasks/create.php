@@ -1,6 +1,6 @@
 <h2 class="h4 mb-4">Create New Task</h2>
 
-<form action="" method="POST">
+<form action="index.php?action=store" method="POST">
     <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" class="form-control" id="title" name="title" required>
@@ -28,5 +28,5 @@
             Back</a>
         <button type="submit" class="btn btn-primary">
             <i class="fas fa-save me-1"></i>Save Task</button>
-    </div>
+        </div>
 </form>

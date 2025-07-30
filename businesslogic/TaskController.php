@@ -11,6 +11,7 @@ class TaskController{
         // $this->taskModel-> createTable(); //create db table
     }
     public function index(){
+        $tasks = $this->taskModel->getAll();
         require_once __DIR__ .'/../presentation/layout.php';
     }
 
@@ -18,7 +19,21 @@ class TaskController{
         require_once __DIR__.'/../presentation/layout.php';
     }
 
-    public function store(){}
+    public function store()
+    {
+        if($_SERVER['REQUEST_METHOD']=== 'POST'){
+            $this->taskModel->title = $_POST['title'];
+            $this->taskModel->description = $_POST['description'];
+            $this->taskModel->due_date = $_POST['due_date'];
+            $this->taskModel->status = $_POST['status'];
+
+            if($this->taskModel->create()){
+                header("Location: index.php?action=index&message=Task+Created+Successfully!");
+            } else{
+                die("Error in creating task");
+            } 
+        }
+    }
 
     public function edit(){}
 
