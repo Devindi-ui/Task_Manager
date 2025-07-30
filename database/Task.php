@@ -84,9 +84,7 @@ class Task
     //update Task
     public function update()
     {
-        $query = "UPDATE $this->table
-        SET title=:title, `description`=:`description`,
-        due_date=:due_date, `status`=:`status` WHERE id=:id";
+        $query = "UPDATE $this->table SET title=:title, description =:description, due_date=:due_date, status =:status WHERE id=:id";
 
         $stmt = $this->conn->prepare($query);
 

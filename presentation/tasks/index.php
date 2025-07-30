@@ -47,7 +47,7 @@
                         </td>
                         <td>
                             <div class="btn-group btn-group sm">
-                                <a href="#" class="btn btn-outline-primary">
+                                <a href="index.php?action=edit&id=<?= $task['id']?>" class="btn btn-outline-primary">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <a href="index.php?action=delete&id=<?= $task['id']?>" class="btn btn-outline-danger" onclick="return confirm('Are you sure?')">
